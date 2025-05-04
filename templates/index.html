@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArogyaMax - AI-Powered Medical Diagnostics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1A76EA;
+            --secondary: #34C2B4;
+            --accent: #FFB74D;
+            --dark: #0A1943;
+            --light: #F8FAFF;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            background: var(--light);
+            color: var(--dark);
+        }
+
+        .nav-brand {
+            font-weight: 800;
+            font-size: 1.8rem;
+            color: var(--primary) !important;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary), #0d47a1);
+            color: white;
+            padding: 10rem 0 15rem;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1000 100" xmlns="http://www.w3.org/2000/svg"><path fill="%23ffffff" d="M0 70L50 85Q100 100 150 85L200 70Q250 55 300 70L350 85Q400 100 450 85L500 70Q550 55 600 70L650 85Q700 100 750 85L800 70Q850 55 900 70L950 85Q1000 100 1050 85L1000 0H0Z"></path></svg>');
+            transform: rotate(180deg);
+        }
+
+        .cta-button {
+            background: var(--secondary);
+            color: white;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+            transform: rotate(45deg);
+            transition: all 0.5s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(52, 194, 180, 0.3);
+        }
+
+        .cta-button:hover::after {
+            left: 150%;
+        }
+
+        .feature-card {
+            background: rgba(255,255,255,0.95);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 12px 40px rgba(10, 25, 67, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(26, 118, 234, 0.1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px rgba(26, 118, 234, 0.1);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(26, 118, 234, 0.1);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-icon i {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .section-title {
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 2rem;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            counter-reset: step;
+        }
+
+        .process-step {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .process-step::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            font-size: 4rem;
+            font-weight: 800;
+            color: rgba(26, 118, 234, 0.05);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar py-3 px-4 px-lg-5">
+        <div class="container">
+            <a class="navbar-brand nav-brand" href="/">
+                <i class="fas fa-heart-pulse me-2"></i>ArogyaMax
+            </a>
+            
+        </div>
+    </nav>
+
+    <section class="hero-section text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 mb-4 fw-800">
+                        Revolutionizing Diagnostics with<br>
+                        <span class="text-accent">AI-Powered Insights</span>
+                    </h1>
+                    <p class="lead mb-5 opacity-75">
+                        Advanced chest pathology detection enhanced with explainable AI technology
+                    </p>
+                    <a href="/upload" class="btn cta-button">
+                        <i class="fas fa-cloud-upload-alt me-2"></i>Analyze Scan
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+  
+
+    <footer class="py-5 bg-dark text-light">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2024 ArogyaMax. Medical AI Diagnostics Platform</p>
+            <small class="opacity-75">For research use only. Not for clinical diagnosis.</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
